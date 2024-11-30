@@ -26,13 +26,13 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build and Test ${{ matrix.package }}
         run: |
           cd packages/${{ matrix.package }}
           if [ -f package.json ]; then
-            yarn install
-            yarn build || true
-            yarn test || true
+            npm install
+            npm build || true
+            npm test || true
           fi
