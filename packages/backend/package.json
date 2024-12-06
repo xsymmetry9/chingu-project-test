@@ -17,13 +17,22 @@
     "url": "git+https://github.com/xsymmetry9/chingu-project-test.git"
   },
   "scripts": {
-    "test": "node ./__tests__/backend.test.js"
+    "test": "npm run test",
+    "server": "node src/listen.ts",
+    "dev": "nodemon --watch ./src --ext ts --exec ts-node src/listen.ts"
   },
   "bugs": {
     "url": "https://github.com/xsymmetry9/chingu-project-test/issues"
   },
   "homepage": "https://github.com/xsymmetry9/chingu-project-test#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }
